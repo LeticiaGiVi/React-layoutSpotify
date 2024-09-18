@@ -587,14 +587,6 @@ video {
   height: 100lvh;
 }
 
-.h-svh {
-  height: 100svh;
-}
-
-.h-screen {
-  height: 100vh;
-}
-
 .w-1\/5 {
   width: 20%;
 }
@@ -605,10 +597,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-2\/5 {
-  width: 40%;
 }
 
 .flex-row {
