@@ -24,35 +24,56 @@ function Home() {
         <Container>
             <Sidebar/>
             <MainConteudo>
+                <div className="flex flex-col">
+            <h1 className="text-white font-bold">POP</h1>
                 <div className="flex flex-row">
-                <h1>POP</h1>
                 {
                     artistas
                     .filter( artista => artista.genero.includes("pop"))
                     .map( artista => (
                         <Link to= {`/artista/${artista._id}`}>
-                        <div className="conteudo bg-rosa size-40 flex flex-col items-center justify-evenly py-1 m-3">
-                            <p>{artista.name}</p>
-                            <div className="conteudoDoConteudo bg-ciano h-1/3 w-4/5"></div>
+                        <div className="bg-slate-800 flex flex-col items-center justify-evenly py-1 m-3">
+                            <img className="size-40 m-4" src={artista.image} alt="" />
+                            <h2 className="text-white font-bold">{artista.name}</h2>
                         </div>
                         </Link>
                     ))
                 }
                 </div>
+                </div>
+                <div className="flex flex-col">
+                <h1 className="text-white font-bold">Rock</h1>
                 <div className="flex flex-row">
-                <h1>Rock</h1>
                 {
                     artistas
                     .filter( artista => artista.genero.includes("rock"))
                     .map( artista => (
                         <Link to= {`/artista/${artista._id}`}>
-                        <div className="conteudo bg-rosa size-40 flex flex-col items-center justify-evenly py-1 m-3">
-                            <p>{artista.name}</p>
-                            <div className="conteudoDoConteudo bg-ciano h-1/3 w-4/5"></div>
+                        <div className="bg-slate-800 flex flex-col items-center justify-evenly py-1 m-3">
+                            <img className="size-40 m-4" src={artista.image} alt="" />
+                            <h2 className="text-white font-bold">{artista.name}</h2>
                         </div>
                         </Link>
                     ))
                 }
+                </div>
+                </div>
+                <div className="flex flex-col">
+                <h1 className="text-white font-bold" >MPB</h1>
+                <div className="flex flex-row">
+                {
+                    artistas
+                    .filter( artista => artista.genero.includes("MPB"))
+                    .map( artista => (
+                        <Link to= {`/artista/${artista._id}`}>
+                        <div className="bg-slate-800 flex flex-col items-center justify-evenly py-1 m-3">
+                            <img className="size-40 m-4" src={artista.image} alt="" />
+                            <h2 className="text-white font-bold">{artista.name}</h2>
+                        </div>
+                        </Link>
+                    ))
+                }
+                </div>
                 </div>
 
             </MainConteudo>

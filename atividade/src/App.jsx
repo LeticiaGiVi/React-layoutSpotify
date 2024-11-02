@@ -16,7 +16,7 @@ function App() {
     <>
     <div className='h-lvh flex flex-col'>
       <Header/>
-      <Home/>
+      <Outlet/>
     </div>
     </>
   )
